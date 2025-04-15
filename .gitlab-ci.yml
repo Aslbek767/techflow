@@ -13,4 +13,4 @@ deploy:
     - ssh-keyscan $SSH_HOST_DOCKER_STD >> ~/.ssh/known_hosts
     - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -p $SSH_PORT_DOCKER_STD $SSH_USER_DOCKER_STD@$SSH_HOST_DOCKER_STD "$REMOTE_COMMAND"
   only:
-   - main
+   - master
