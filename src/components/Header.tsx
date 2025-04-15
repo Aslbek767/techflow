@@ -13,7 +13,6 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const t   = useTranslations('header');
   const locale = useLocale()
-  console.log(locale)
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
