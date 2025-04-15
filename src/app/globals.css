@@ -31,7 +31,8 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-[#101726] to-[#1e3477] text-foreground;
+    /* @apply bg-gradient-to-br from-[#101726] to-[#1e3477] text-foreground; */
+    @apply bg-gradient-to-br from-[#0A1A36] to-[#3B82F6] text-foreground;
     min-height: 100vh;
   }
 
@@ -54,7 +55,7 @@
 
 @layer components {
   .container-custom {
-    @apply container mx-auto px-6 md:px-8 max-w-7xl;
+    @apply container mx-auto px-6 md:px-8 max-w-[1536px];
   }
 
   .stat-item {
@@ -130,3 +131,4 @@
     --chart-5: 340 75% 55%;
   }
 }
+

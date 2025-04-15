@@ -1,0 +1,16 @@
+stages:
+  - deploy
+
+variables:
+  REMOTE_COMMAND: "cd /home/docker/projects/dataprizma/techflow-website/ && bash deploy.sh"
+
+deploy:
+  stage: deploy
+  image: registry.git.dataprizma.uz/bases/ubuntu-ssh:22.04
+  script:
+    - echo "$SSH_PRIVATE_DOCKER_STD" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan $SSH_HOST_DOCKER_STD >> ~/.ssh/known_hosts
+    - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -p $SSH_PORT_DOCKER_STD $SSH_USER_DOCKER_STD@$SSH_HOST_DOCKER_STD "$REMOTE_COMMAND"
+  only:
+   - main

@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -H 0.0.0.0 --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next dev -p 3048",
+		"start": "next start -p 3048",
+		"build": "next build",
     "lint": "bunx biome lint --write && bunx tsc --noEmit",
     "format": "bunx biome format --write"
   },
@@ -20,6 +20,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.475.0",
     "next": "^15.2.0",
+    "next-intl": "^4.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.55.0",
@@ -28,8 +29,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@biomejs/biome": "1.9.4",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",

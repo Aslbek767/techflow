@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const Footer = () => {
+  const t = useTranslations()
   return (
     <footer className="pt-16 pb-6 bg-techflow-dark">
       <div className="container-custom">
@@ -26,7 +28,8 @@ const Footer = () => {
               <span className="text-xl font-bold">TechFlow</span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-              Streamlining maintenance processes for organizations worldwide.
+              {/* Streamlining maintenance processes for organizations worldwide. */}
+              { t('footer.desc') }
             </p>
             <div className="flex gap-4 mt-6">
               <Link href="#" className="text-muted-foreground hover:text-primary">
@@ -86,78 +89,78 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Product</h4>
+            <h4 className="text-lg font-semibold mb-4">{ t('footer.product') }</h4>
             <ul className="space-y-3">
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Features
+                  { t('footer.product-1') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Pricing
+                  { t('footer.product-2') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Integrations
+                  { t('footer.product-3') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Updates
+                  { t('footer.product-4') }
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <h4 className="text-lg font-semibold mb-4">{ t('footer.resources') }</h4>
             <ul className="space-y-3">
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Documentation
+                { t('footer.resource-1') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Tutorials
+                { t('footer.resource-2') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Blog
+                { t('footer.resource-3') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Support
+                { t('footer.resource-4') }
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <h4 className="text-lg font-semibold mb-4">{ t('footer.company') }</h4>
             <ul className="space-y-3">
               <li>
                 <Link href="/about" className="text-sm text-muted-foreground hover:text-primary">
-                  About Us
+                { t('footer.company-1') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Careers
+                { t('footer.company-2') }
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">
-                  Contact
+                { t('footer.company-3') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Privacy Policy
+                { t('footer.company-4') }
                 </Link>
               </li>
             </ul>
@@ -165,7 +168,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} TechFlow. All rights reserved.
+          © {new Date().getFullYear()} TechFlow. { t('footer.rights-reserved') }
         </div>
       </div>
     </footer>
