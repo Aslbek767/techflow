@@ -3,6 +3,5 @@ services:
       build:
          context: ./
          dockerfile: ./Dockerfile
-      image: prizmatech-site
       ports:
          - "3048:3048"
