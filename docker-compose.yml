@@ -1,18 +1,18 @@
 services:
-   app:
-      build:
-         context: ./
-         dockerfile: ./Dockerfile
-      ports:
-         - "3048:3048"
+    app:
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        ports:
+        - "3048:3048"
     ghost:
-      image: ghost:alpine
-      restart: always
-      ports:
-          - "2368:2368"
-      volumes:
-          - ./ghost-content:/var/lib/ghost/content
-      environment:
-          url: http://techflow.uz/pages/
-          database__client: sqlite3
-          database__connection__filename: /var/lib/ghost/content/data/ghost.db
+        image: ghost:alpine
+        restart: always
+        ports:
+        - "2368:2368"
+        volumes:
+        - ./ghost-content:/var/lib/ghost/content
+        environment:
+            url: http://techflow.uz/pages/
+            database__client: sqlite3
+            database__connection__filename: /var/lib/ghost/content/data/ghost.db
