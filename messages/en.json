@@ -2,7 +2,8 @@
     "header": {
         "home": "Home",
         "about": "About",
-        "contact": "Contact"
+        "contact": "Contact",
+        "resources": "Resources"
     },
     "home": {
         "title": "Home",
@@ -103,6 +104,8 @@
         "company-2": "Careers",
         "company-3": "Contacts",
         "company-4": "Privacy Policy",
+        "company-resources": "Resources",
+        "company-support": "Support",
         "rights-reserved": "All rights reserved."
     }
 }

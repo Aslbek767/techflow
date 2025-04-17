@@ -2,7 +2,8 @@
     "header": {
         "home": "Главная",
         "about": "О нас",
-        "contact": "Контакты"
+        "contact": "Контакты",
+        "resources": "Ресурсы"
     },
     "home": {
         "title": "Главная",
@@ -103,6 +104,8 @@
         "company-2": "Карьера",
         "company-3": "Контакты",
         "company-4": "Политика конфиденциальности",
+        "company-resources": "Ресурсы",
+        "company-support": "Поддержка",
         "rights-reserved": "Все права защищены."
     }
 }

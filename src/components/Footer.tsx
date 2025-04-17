@@ -101,7 +101,7 @@ const Footer = () => {
                   { t('footer.product-2') }
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
                   { t('footer.product-3') }
                 </Link>
@@ -110,7 +110,7 @@ const Footer = () => {
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
                   { t('footer.product-4') }
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -119,15 +119,18 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                { t('footer.resource-1') }
+                {/* { t('footer.resource-1') } */}
+                  { t('footer.company-1') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                { t('footer.resource-2') }
+                {/* { t('footer.resource-2') } */}
+
+                  { t('footer.company-3') }
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
                 { t('footer.resource-3') }
                 </Link>
@@ -136,7 +139,7 @@ const Footer = () => {
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
                 { t('footer.resource-4') }
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -145,15 +148,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link href="/about" className="text-sm text-muted-foreground hover:text-primary">
-                { t('footer.company-1') }
+                { t('footer.company-support') }
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                { t('footer.company-2') }
+                <Link href="/pages" className="text-sm text-muted-foreground hover:text-primary">
+                { t('footer.company-resources') }
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">
                 { t('footer.company-3') }
                 </Link>
@@ -162,7 +165,7 @@ const Footer = () => {
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
                 { t('footer.company-4') }
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
