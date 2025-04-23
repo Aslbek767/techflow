@@ -134,7 +134,7 @@ const Header = () => {
           <Link href={`/${locale}`} className="text-white hover:text-blue-300 transition-colors">{t('home')}</Link>
           <Link href={`/${locale}/about`} className="text-white hover:text-blue-300 transition-colors">{t('about')}</Link>
           <Link href={`/${locale}/contact`} className="text-white hover:text-blue-300 transition-colors">{t('contact')}</Link>
-          <Link href={`/${locale}/pages/tag`} className="text-white hover:text-blue-300 transition-colors">{t('resources')}</Link>
+          <Link href={`/pages/tag/${locale}`} className="text-white hover:text-blue-300 transition-colors">{t('resources')}</Link>
 
           </nav>
 
