@@ -244,11 +244,9 @@ const t = useTranslations()
           <div className="bg-black bg-opacity-20 rounded-2xl p-12 backdrop-blur-sm max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                {/* Ready to Transform Your Maintenance Operations? */}
                 { t('operations.header') }
               </h2>
               <p className="text-xl text-gray-200">
-                {/* Get started with TechFlow today and see the difference it makes for your team. */}
                 { t('operations.desc') }
               </p>
             </div>
@@ -266,14 +264,12 @@ const t = useTranslations()
               ))}
             </div>
 
-            {/* Buttons */}
             <div className="text-center">
               <button className="gap-2 h-10 bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-full text-lg transition-colors inline-flex items-center justify-center mx-2 mb-3 md:mb-0">
-                {/* Schedule a Demo */}
+
                 { t('operations.btn_schedule') }
               </button>
               <button className="gap-2 h-10 bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white font-medium py-3 px-8 rounded-full text-lg transition-all inline-flex items-center justify-center mx-2">
-                {/* View Pricing */}
                 { t('operations.btn_pricing') }
               </button>
             </div>
@@ -286,18 +282,14 @@ const t = useTranslations()
       <section id="contact" className="bg-gray-900 py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Contact Info */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                {/* Get in Touch */}
                 { t('contact.title') }
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                {/* Have questions about TechFlow? Our team is here to help you find the right solution for your maintenance needs. */}
                 { t('contact.desc') }
               </p>
               <div className="space-y-6">
-                {/* Email */}
                 <div className="flex items-start">
                   <div className="bg-blue-600 p-3 rounded-full mr-4">
                     <svg className="text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -310,7 +302,6 @@ const t = useTranslations()
                     <p className="text-gray-300">info@techflow.example.com</p>
                   </div>
                 </div>
-                {/* Phone */}
                 <div className="flex items-start">
                   <div className="bg-blue-600 p-3 rounded-full mr-4">
                     <svg className="text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -322,7 +313,6 @@ const t = useTranslations()
                     <p className="text-gray-300">(555) 123-4567</p>
                   </div>
                 </div>
-                {/* Address */}
                 <div className="flex items-start">
                   <div className="bg-blue-600 p-3 rounded-full mr-4">
                     <svg className="text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -341,7 +331,6 @@ const t = useTranslations()
               </div>
             </div>
 
-            {/* Contact Form */}
             <div>
               <form className="bg-gray-800 p-8 rounded-xl">
                 <h3 className="text-2xl font-bold mb-6 text-white">{ t('contact.form-label') }</h3>

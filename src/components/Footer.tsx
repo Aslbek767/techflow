@@ -1,8 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 
 const Footer = () => {
   const t = useTranslations()
+  const locale = useLocale()
   return (
     <footer className="pt-16 pb-6 bg-techflow-dark">
       <div className="container-custom">
@@ -28,7 +29,6 @@ const Footer = () => {
               <span className="text-xl font-bold">TechFlow</span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-              {/* Streamlining maintenance processes for organizations worldwide. */}
               { t('footer.desc') }
             </p>
             <div className="flex gap-4 mt-6">
@@ -101,16 +101,6 @@ const Footer = () => {
                   { t('footer.product-2') }
                 </Link>
               </li>
-              {/* <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  { t('footer.product-3') }
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  { t('footer.product-4') }
-                </Link>
-              </li> */}
             </ul>
           </div>
 
@@ -119,27 +109,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                {/* { t('footer.resource-1') } */}
                   { t('footer.company-1') }
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                {/* { t('footer.resource-2') } */}
-
                   { t('footer.company-3') }
                 </Link>
               </li>
-              {/* <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                { t('footer.resource-3') }
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                { t('footer.resource-4') }
-                </Link>
-              </li> */}
             </ul>
           </div>
 
@@ -152,20 +129,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/pages" className="text-sm text-muted-foreground hover:text-primary">
+                <Link href={`/pages/tag/${locale}`} className="text-sm text-muted-foreground hover:text-primary">
                 { t('footer.company-resources') }
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">
-                { t('footer.company-3') }
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                { t('footer.company-4') }
-                </Link>
-              </li> */}
             </ul>
           </div>
         </div>

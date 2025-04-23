@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export const metadata = {
   title: "Contact - TechFlow",
@@ -9,19 +9,18 @@ export const metadata = {
 };
 
 export default function ContactPage() {
+  const t = useTranslations();
   return (
     <div className="flex flex-col">
-      {/* CTA Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-[#1a2842] to-[#101c38]">
         <div className="container-custom">
           <div className="p-8 md:p-12 bg-techflow-dark/70 rounded-2xl">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Transform Your Maintenance Operations?
+                {t('operations.header')}
               </h1>
               <p className="text-lg text-techflow-light/80 max-w-3xl mx-auto">
-                Get started with TechFlow today and see the difference it makes
-                for your team.
+                {t('operations.desc')}
               </p>
             </div>
 
@@ -30,9 +29,9 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white text-lg font-bold mb-4">
                   1
                 </div>
-                <h3 className="text-xl font-bold mb-2">Schedule a Demo</h3>
+                <h3 className="text-xl font-bold mb-2">{t('operations.step-1-title')}</h3>
                 <p className="text-techflow-light/80">
-                  See TechFlow in action with your data
+                  {t('operations.step-1-desc')}
                 </p>
               </div>
 
@@ -40,9 +39,9 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white text-lg font-bold mb-4">
                   2
                 </div>
-                <h3 className="text-xl font-bold mb-2">Custom Setup</h3>
+                <h3 className="text-xl font-bold mb-2">{t('operations.step-2-title')}</h3>
                 <p className="text-techflow-light/80">
-                  We'll configure it to your workflow
+                {t('operations.step-2-desc')}
                 </p>
               </div>
 
@@ -50,34 +49,32 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white text-lg font-bold mb-4">
                   3
                 </div>
-                <h3 className="text-xl font-bold mb-2">Go Live</h3>
+                <h3 className="text-xl font-bold mb-2">{t('operations.step-3-title')}</h3>
                 <p className="text-techflow-light/80">
-                  Start optimizing your operations
+                  {t('operations.step-3-desc')}
                 </p>
               </div>
             </div>
 
             <div className="mt-12 flex justify-center gap-4">
               <Button size="lg" className="rounded-md">
-                Schedule a Demo
+                {t('operations.btn_schedule')}
               </Button>
               <Button size="lg" variant="outline" className="rounded-md">
-                View Pricing
+              {t('operations.btn_pricing')}
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="py-16 md:py-24 bg-techflow-dark">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+              <h2 className="text-3xl font-bold mb-6">{t('contact.title')}</h2>
               <p className="text-techflow-light/80 mb-8">
-                Have questions about TechFlow? Our team is here to help you find
-                the right solution for your maintenance needs.
+                {t('contact.desc')}
               </p>
 
               <div className="space-y-6">
@@ -98,7 +95,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">Call Us</h3>
+                    <h3 className="text-xl font-bold">{t('contact.phone')}</h3>
                     <p className="text-techflow-light/80">(555) 123-4567</p>
                   </div>
                 </div>
@@ -121,7 +118,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">Email Us</h3>
+                    <h3 className="text-xl font-bold">{t('contact.email')}</h3>
                     <p className="text-techflow-light/80">
                       info@techflow.example.com
                     </p>
@@ -146,7 +143,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">Visit Us</h3>
+                    <h3 className="text-xl font-bold">{t('contact.address')}</h3>
                     <p className="text-techflow-light/80">
                       123 Tech Lane, Suite 400
                       <br />
@@ -158,36 +155,36 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-techflow-dark-lighter p-8 rounded-lg">
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+              <h2 className="text-2xl font-bold mb-6">{t('contact.form-label')}</h2>
               <form className="space-y-6">
                 <div>
                   <Input
                     type="text"
-                    placeholder="Your Name"
+                    placeholder={t('contact.name-label')}
                     className="bg-gray-800/50 border-gray-700"
                   />
                 </div>
                 <div>
                   <Input
                     type="email"
-                    placeholder="Email Address"
+                    placeholder={t('contact.email-label')}
                     className="bg-gray-800/50 border-gray-700"
                   />
                 </div>
                 <div>
                   <Input
                     type="text"
-                    placeholder="Company Name"
+                    placeholder={t('contact.company-label')}
                     className="bg-gray-800/50 border-gray-700"
                   />
                 </div>
                 <div>
                   <Textarea
-                    placeholder="Message"
+                    placeholder={t('contact.message-label')}
                     className="bg-gray-800/50 border-gray-700 min-h-[120px]"
                   />
                 </div>
-                <Button className="w-full rounded-md">Send Message</Button>
+                <Button className="w-full rounded-md">{t('contact.send-message')}</Button>
               </form>
             </div>
           </div>

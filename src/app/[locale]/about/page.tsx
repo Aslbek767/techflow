@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export const metadata = {
   title: "About - TechFlow",
@@ -7,41 +7,35 @@ export const metadata = {
 };
 
 export default function AboutPage() {
+  const t = useTranslations();
+
+
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
       <section className="py-16 md:py-20 bg-techflow-dark">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About TechFlow
+              {t('about.header')}
             </h1>
             <p className="text-xl text-techflow-light/80">
-              We help maintenance teams work smarter with powerful tools designed
-              for modern asset management.
+              {t('about.desc')}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="py-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">Our Mission</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">{t('about.content-title')}</h2>
               <div className="space-y-4">
                 <p className="text-techflow-light/80">
-                  TechFlow was developed to solve the common challenges faced by
-                  maintenance teams. Our platform simplifies complex workflows,
-                  reduces downtime, and helps organizations maintain critical
-                  infrastructure with less effort.
+                { t('about.content-description-1') }
                 </p>
                 <p className="text-techflow-light/80">
-                  We believe that great maintenance management shouldn't require
-                  engineering degrees or weeks of training. Our intuitive
-                  interface makes powerful asset management accessible to
-                  everyone on your team.
+                { t('about.content-description-2') }
                 </p>
               </div>
             </div>
@@ -49,33 +43,31 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="stat-item">
                 <div className="stat-number">98%</div>
-                <div className="stat-label">Reduction in unplanned downtime</div>
+                <div className="stat-label">{t('about.stat-label-1')}</div>
               </div>
               <div className="stat-item">
                 <div className="stat-number">85%</div>
-                <div className="stat-label">Faster maintenance scheduling</div>
+                <div className="stat-label">{t('about.stat-label-2')}</div>
               </div>
               <div className="stat-item">
                 <div className="stat-number">50%</div>
-                <div className="stat-label">Reduction in inventory costs</div>
+                <div className="stat-label">{t('about.stat-label-3')}</div>
               </div>
               <div className="stat-item">
                 <div className="stat-number">3.5x</div>
-                <div className="stat-label">ROI in the first year</div>
+                <div className="stat-label">{t('about.stat-label-4')}</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-20 bg-techflow-dark">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Powerful Features</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('features.header')}</h2>
             <p className="text-lg text-techflow-light/80 max-w-3xl mx-auto">
-              Everything you need to manage your maintenance operations in one
-              place.
+              {t('features.desc')}
             </p>
           </div>
 
@@ -104,10 +96,9 @@ export default function AboutPage() {
                   <rect width="7" height="7" x="14" y="14" rx="1" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Asset Management</h3>
+              <h3 className="text-xl font-bold mb-2">{t('features.card-1-title')}</h3>
               <p className="text-sm text-techflow-light/70">
-                Track equipment details, location, maintenance history, and
-                performance metrics all in one place.
+                {t('features.card-1-desc')}
               </p>
             </div>
 
@@ -137,10 +128,9 @@ export default function AboutPage() {
                   <path d="M16 18h.01" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Maintenance Planning</h3>
+              <h3 className="text-xl font-bold mb-2">{t('features.card-2-title')}</h3>
               <p className="text-sm text-techflow-light/70">
-                Create preventive maintenance schedules, set recurring tasks, and
-                optimize your team's workflow.
+                {t('features.card-2-desc')}
               </p>
             </div>
 
@@ -164,10 +154,9 @@ export default function AboutPage() {
                   <rect width="8" height="8" x="13" y="13" rx="2" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Task Management</h3>
+              <h3 className="text-xl font-bold mb-2">{t('features.card-3-title')}</h3>
               <p className="text-sm text-techflow-light/70">
-                Assign, track, and manage maintenance tasks with detailed
-                instructions and attachments.
+                {t('features.card-3-desc')}
               </p>
             </div>
 
@@ -190,32 +179,29 @@ export default function AboutPage() {
                   <line x1="12" x2="18" y1="9" y2="15" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Inventory Control</h3>
+              <h3 className="text-xl font-bold mb-2">{t('features.card-4-title')}</h3>
               <p className="text-sm text-techflow-light/70">
-                Manage spare parts, set minimum stock levels, and generate
-                purchase orders automatically.
+                {t('features.card-4-title')}
               </p>
             </div>
           </div>
 
           <div className="mt-12 text-center">
             <Button variant="outline" className="rounded-md">
-              Explore All Features
+              {t('features.btn_text')}
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Intelligence Section */}
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">
-              Smart Maintenance Intelligence
+              {t('maintenance.header')}
             </h2>
             <p className="text-lg text-techflow-light/80 max-w-3xl mx-auto">
-              TechFlow provides data-driven insights to optimize your
-              maintenance operations and reduce costs
+              {t('maintenance.desc')}
             </p>
           </div>
 
@@ -223,45 +209,40 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="stat-item">
                 <div className="stat-number">43%</div>
-                <h3 className="text-xl font-bold mb-2">Cost Reduction</h3>
+                <h3 className="text-xl font-bold mb-2">{t('maintenance.card-1-title')}</h3>
                 <p className="text-sm text-center text-techflow-light/70">
-                  Optimize maintenance schedules based on actual equipment usage
-                  and condition
+                  {t('maintenance.card-1-desc')}
                 </p>
               </div>
               <div className="stat-item">
                 <div className="stat-number">87%</div>
-                <h3 className="text-xl font-bold mb-2">Faster Response</h3>
+                <h3 className="text-xl font-bold mb-2">{t('maintenance.card-2-title')}</h3>
                 <p className="text-sm text-center text-techflow-light/70">
-                  Automated alerts and prioritization based on critical system
-                  analysis
+                  {t('maintenance.card-2-desc')}
                 </p>
               </div>
               <div className="stat-item">
                 <div className="stat-number">62%</div>
-                <h3 className="text-xl font-bold mb-2">Better Forecasting</h3>
+                <h3 className="text-xl font-bold mb-2">{t('maintenance.card-3-title')}</h3>
                 <p className="text-sm text-center text-techflow-light/70">
-                  Predictive algorithms anticipate failures before they occur
+                  {t('maintenance.card-3-desc')}
                 </p>
               </div>
               <div className="stat-item">
                 <div className="stat-number">35%</div>
-                <h3 className="text-xl font-bold mb-2">Inventory Savings</h3>
+                <h3 className="text-xl font-bold mb-2">{t('maintenance.card-4-title')}</h3>
                 <p className="text-sm text-center text-techflow-light/70">
-                  Smart stocking recommendations based on maintenance patterns
+                  {t('maintenance.card-4-desc')}
                 </p>
               </div>
             </div>
 
             <div>
               <h3 className="text-xl font-bold mb-4">
-                Data-Driven Decision Making
+                {t('maintenance.content-title')}
               </h3>
               <p className="text-techflow-light/80 mb-6">
-                TechFlow transforms raw maintenance data into actionable
-                intelligence. Our advanced analytics engine continuously monitors
-                equipment performance, maintenance history, and operational
-                patterns to generate insights that help you:
+                {t('maintenance.content_desc')}
               </p>
 
               <ul className="space-y-4">
@@ -282,8 +263,7 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <span className="text-techflow-light/80">
-                    Identify potential failures before they occur with predictive
-                    maintenance
+                    {t('maintenance.content-item-1')}
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -303,8 +283,7 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <span className="text-techflow-light/80">
-                    Optimize maintenance schedules to reduce unnecessary work
-                    and extend equipment life
+                  {t('maintenance.content-item-2')}
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -324,8 +303,7 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <span className="text-techflow-light/80">
-                    Make smarter inventory decisions with usage-based stocking
-                    recommendations
+                    {t('maintenance.content-item-3')}
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -345,14 +323,13 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <span className="text-techflow-light/80">
-                    Identify cost saving opportunities through detailed
-                    operational analytics
+                    {t('maintenance.content-item-4')}
                   </span>
                 </li>
               </ul>
 
               <div className="mt-8">
-                <Button className="rounded-md">Explore Analytics Features</Button>
+                <Button className="rounded-md">{t('maintenance.btn_text')}</Button>
               </div>
             </div>
           </div>
